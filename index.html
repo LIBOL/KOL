@@ -1,0 +1,399 @@
+<html>
+<style type="text/css">
+body,td,th {
+	color: #000000;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-color: #000000;
+	font-size: 18px;
+}
+body {
+	background-color: #CCCCCC;
+	font-size: 16px;
+	color: rgba(0,0,0,1.00);
+}
+a:link {
+	color: #0000FF;
+}
+.STYLE2 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+</style>
+<body background="A786900434228CUC.jpg">
+<div style="color:#00FF00">
+  <h1 align="center">&nbsp;</h1>
+  <h1 align="center" class="STYLE2">Large Scale Online Kernel Learning  </h1>
+</div>
+    <div align="center">
+      <p><em>Authors: Jing Lu, <a href="http://www.mysmu.edu.sg/faculty/chhoi/index.html">Steven C.H. Hoi</a>, Jialei Wang, <a href="https://sites.google.com/site/homeplzhao/">Peilin Zhao</a>, Zhi-Yong Liu</em></p>
+      <p>&nbsp;</p>
+    </div>
+<table width="959" border="0" align="center" bgcolor="#FFFFFF">
+
+  <tr>
+    <td width="5" height="50"><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+    <td width="194"><div align="justify"><strong><a href="#C1">Overview</a></strong></div></td>
+    <td width="166"><div align="justify"><strong><a href="#C5">Download</a></strong></div></td>
+    <td width="192"><div align="justify"><strong><a href="#C2">Algorithms</a></strong></div></td>
+    <td width="168"><div align="justify"><strong><a href="#C3">C++ Toolbox</a></strong></div></td>
+    <td width="199"><div align="justify"><strong><a href="#C4">Matlab Code</a></strong></div></td>
+  </tr>
+  <tr>
+    <td height="4956">&nbsp;</td>
+    <td colspan="6"><div>
+      <hr />
+      <h2><strong><a name="C1">Overview</a></strong></h2>
+      <p align="justify">We present LSOKL: Large Scale Online Kernel Learning, a toolbox that consists of several recently proposed algorithms for large-scale online kernel learning, in both C++ and Matlab implementations.
+        LSOKL  is an open-source software toolbox and free for non-comercial purposes. If you find the toolbox useful in your own work, please cite our related papers. </p>
+      <ul>
+        <li><span lang="EN-US" align="justify">"<u>Large Scale Online Kernel Learning</u>" Jing Lu, Steven C.H.          Hoi, Jialei Wang, Peilin          Zhao, Zhiyong Liu. </span>Technical Report of Nanyang Technological University,  2014 [ <a href="LSOKL_JMLR_new.pdf">PDF</a> ] (Under Journal Review) </li>
+        <li>"<u>Large Scale Online Kernel Classification </u>", Jialei Wang^, Steven C.H. Hoi, Peilin Zhao*, Jinfeng Zhuang*, Zhi-yong Liu The 23rd International Joint Conference on Artificial Intelligence (IJCAI2013) Beijing, China August 3-9, 2013 (oral)        </li>
+        </ul>
+      <hr />
+      <h2><strong><a name="C5">Download</a></strong></h2>
+      <table width="915" border="0">
+        <tr>
+          <td width="695" height="85"><span lang="EN-US">You need to read and agree to <a href="policy.htm">this  </a> before downloading the source code of our software toolbox.</span></td>
+          <td width="210"><a href="LSOKLv1.0.zip"><img src="download.png" alt="" width="206" height="79" border="0"/></a></td>
+        </tr>
+      </table>
+      <hr />
+      <h2><strong><a name="C2">Algorithms </a></strong></h2>
+This library provides highly optimized implementations of widely used online kernel learning algorithms, including:
+<ul>
+  <li>
+    <p><strong>Perceptron</strong>: The kernelized Perceptron without budget maintainance. [<a href="http://cseweb.ucsd.edu/~yfreund/papers/LargeMarginsUsingPerceptron.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>Online Gradient Descent (OGD): </strong>The kernelized online gradient descent algorithm without budget maintainance. [<a href="http://eprints.pascal-network.org/archive/00002055/01/KivSmoWil04.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>Random Budget Perceptron (RBP): </strong>Budgeted perceptron algorithm with random support vector removal strategy. [<a href="http://air.unimi.it/bitstream/2434/26350/1/J29.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>Forgetron: </strong>Forgetron algorithm that maintains the budget size by discarding the oldest support vectors. [<a href="http://papers.nips.cc/paper/2806-the-forgetron-a-kernel-based-perceptron-on-a-fixed-budget.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>Projectron: </strong>The Projectron algorithm using budget projection strategy. [<a href="http://eprints.pascal-network.org/archive/00004472/01/355.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>Projectron++: </strong>The aggressive version of Projectron algorithm that updates with both margin error and mistake case. [<a href="http://eprints.pascal-network.org/archive/00004472/01/355.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>BPAs: </strong>The budget passive-aggressive algrotihtm with simple supprot removal strategy. [<a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_WangV10.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>BOGD: </strong>The budget online gradient descent algorithm by SV removal strategy [<a href="http://arxiv.org/ftp/arxiv/papers/1206/1206.4633.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>FOGD: </strong>The Fourier Online Gradient Descent algorithm using functional approximation method.[<a href="http://www.cais.ntu.edu.sg/~chhoi/paper_pdf/LSOKC.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+  <li>
+    <p><strong>NOGD: </strong>The Nystrom Online Gradient Descent algorithm using functional approximation method.[<a href="http://www.cais.ntu.edu.sg/~chhoi/paper_pdf/LSOKC.pdf"target= "_blank">pdf</a>]</p>
+    </li>
+</ul>
+<p>The properities of the online kernel learning algorithms are summarized in Table 2.</p>
+<table width="508" height="255" align="center" class="tftable" id="tfhover2" bgcolor="FFFFCC" border="1" style="border-collapse:collapse; border:1px solid #000" >
+  <caption>
+    Table 1. Comparison on budget online kernel algorithms
+  </caption>
+  <tr bgcolor="FFFF99">
+    <th width="86">Algorithm</th>
+    <th width="194">Budget Strategy</th>
+    <th width="101">Update time</th>
+    <th width="99">Space</th>
+  </tr>
+  <tr>
+    <td><b>RBP</b></td>
+    <td>Removal</td>
+    <td><i>O(B)</i></td>
+    <td><i>O(B)</i></td>
+  </tr>
+  <tr>
+    <td><b>Forgetron</b></td>
+    <td>Removal</td>
+    <td><i>O(B)</i></td>
+    <td><i>O(B)</i></td>
+  </tr>
+  <tr>
+    <td><b>Projectron</b></td>
+    <td>Prjection</td>
+    <td><i>O(B<sup>2</sup>)</i></td>
+    <td><i>O(B<sup>2</sup>)</i></td>
+  </tr>
+  <tr>
+    <td><b>Projectron</b></td>
+    <td>Projection</td>
+    <td><i>O(B<sup>2</sup>)</i></td>
+    <td><i>O(B<sup>2</sup>)</i></td>
+  </tr>
+  <tr>
+    <td><b>BPAs</b></td>
+    <td>Removal</td>
+    <td><i>O(B)</i></td>
+    <td><i>O(B)</i></td>
+  </tr>
+  <tr>
+    <td><b>BOGD</b></td>
+    <td>Removal</td>
+    <td><i>O(B)</i></td>
+    <td><i>O(B)</i></td>
+  </tr>
+  <tr>
+    <td><b>FOGD</b></td>
+    <td>Functional Approximation</td>
+    <td><i>O(D)</i></td>
+    <td><i>O(D)</i></td>
+  </tr>
+  <tr>
+    <td><b>NOGD</b></td>
+    <td>Functional Approximation</td>
+    <td><i>O(kB)</i></td>
+    <td><i>O(kB)</i></td>
+  </tr>
+</table>
+</p>
+<p>where, <i>B</i> is the budget size of budget learning algorithms, <i>D</i> is the number of Fourier components and <i>k</i> is the matrix approximation rank of Nystrom.</p>
+<hr />
+<h2><strong><a name="C3">About the C++ toolbox</a></strong></h2>
+<p>We provide simple and easy-to-use command-line toolbox that solves kernel binary classification problems. </p>
+<h3>3.1 Input Dateset Format</h3>
+<p>This toolbox works with <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"target= "_blank">LIBSVM</a> sparse formate. Each instance in the dataset is represented by a row of numbers ended by "\n". For example: </p>
+<div> <code>
+  <p>+1 5:1 16:1 20:1 37:1 40:1 63:1 68:1 73:1 74:1 76:1 82:1 93:1 </p>
+  <p>-1 2:1 6:1 18:1 19:1 39:1 40:1 52:1 61:1 71:1 72:1 74:1 76:1 80:1 95:1</p>
+</code> </div>
+<p align="justify">In the above dataset, there are 2 instances stored in two rows. Each row begins with the class label of this instance. In binary classification the label appears in two forms: {+1, -1}. Note that some dataset files might be labeled with {0, 1}, which is not allowed by our toolbox. They have to be preprocessed and transformed to the {-1,+1} formate.
+  Following the label, the feature values appears in form <code>feature_index:feature_value</code>. This is a sparse feature representation. If one certain feature index does not appear, it indicates that its value is zero. </p>
+<p>Our toolbox is well designed to follow the standard online learning setting and load the dataset sequentially. Users are not required to input the feature dimension of the dataset before training, since the algorithm will automaticly adjust to the increase of feature dimension.</p>
+<h3>3.2 Command Line</h3>
+<p>After compiling the code of the toolbox and getting the executable file "<code>KOL</code>", we can use command line mode to run the algorithms:</p>
+<p><code>>> KOL -i training_dataset [-t testing_dataset] -opt algorithm_name [parameter setting]</code></p>
+<p align="justify"><code>KOL</code> is the name of the executable file we got from compiling the code. <code>-i training_dataset</code> is a necessary input indicating the training dataset name. <code>-opt algorithm_name</code> is another necessary input indicating the selected algorithm for learning. <code>-t testing_dataset</code> is an optional input indicating the testing dataset name. If not indicated, the algorithm will only conduct the training process and output the online training accuracy and time cost. <code>parameter setting</code> is also optional and diverses among different algorithms. If not indicated, the algorithm will use default setting.</p>
+<h3>3.3 An example:</h3>
+<p>We try the following command line:</p>
+<p><code>>> KOL -i a9a_train -t a9a_test -opt kernel-perceptron</code></p>
+<p>This is a command for training the online kernelized perceptron algorithm on <code>a9a_train</code> dataset and test it on <code>a9a_test</code> dataset with default parameter settings. The ourput is as followings:</p>
+<div><code>Algorithm:  kernel_perceptron <br />
+  0	10000	20000	30000 <br />
+  #Training Instances:32561<br />
+  Learn acuracy: 78.851997%<br />
+  #SV:6887<br />
+  Learning time: 10.218000 s<br />
+  Test acuracy: 70.738899 %<br />
+  Test time: 9.766000 s </code></div>
+<p align="justify">The second line indicates the number of processed training samples until now, which can give an intuitive impression of the processing speed. This is a necessary output in the case when the training time is extremely long.
+  The output includes the training accuracy, training time cost (including loading time), the number of support vectors, test accuracy and test time (including loading time). </p>
+<h3>3.4 Parameter setting:</h3>
+<p>We summarize the arguments for each algorithm in the following table.</p>
+<table width="929" height="1344" border="1" style="border-collapse:collapse; border:1px solid #000" align="center" class="tftable" id="tfhover2" bgcolor="FFFFCC">
+  <caption>
+    Table 2. Parameter Settings of All Algorithms
+  </caption>
+  <tr bgcolor="FFFF99">
+    <th width="136">Algorithm</th>
+    <th width="87">Parameters</th>
+    <th width="181">Parameters Description</th>
+    <th width="64">Default</th>
+    <th width="427">Examples of Command Line</th>
+  </tr>
+  <tr>
+    <td><code>kernel-perceptron</code></td>
+    <td>-gamma<code></td>
+    <td>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></td>
+    <td align=center>0.01</td>
+    <td><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-perceptron -gamma 0.1</code></div></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><code>kernel-ogd</code></td>
+    <td height="41"><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="2"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-ogd -eta 0.1 -gamma 0.01</code></div></td>
+  </tr>
+  <tr>
+    <td height="38">-eta</td>
+    <td>the learning step size</td>
+    <td align=center>0.5</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><code>kernel-rbp</code></td>
+    <td><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="2"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-rbp -B 300</code></div></td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><code>kernel-forgetron</code></td>
+    <td><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="2"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-forgetron -B 300  -gamma 0.01</code></div></td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><code>kernel-projectron</code></td>
+    <td><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="2"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-projectron -B 300</code></div></td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><code>kernel-projectronpp</code></td>
+    <td>-gamma<code></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="2"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-projectronpp -B 300 -gamma 0.01</code></div></td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><code>kernel-bpas</code></td>
+    <td><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="3"><div align="justify"><code>KOL -i a9a_train -t a9a_test -opt kernel-bpas -B 300 -cbpas 1 -gamma 0.01</code></div></td>
+  </tr>
+  <tr>
+    <td>-cbpas</td>
+    <td>soft margin: <i>C</i></td>
+    <td align=center>1</td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="4"><code>kernel-bogd</code></td>
+    <td><p>-gamma<code></p></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="4"><code>KOL -i a9a_train -opt kernel-bogd -B 300 -lambda 0.1 -eta 0.1 -gamma 0.01</code></td>
+  </tr>
+  <tr>
+    <td>-eta</td>
+    <td>the learning step size</td>
+    <td align=center>0.5</td>
+  </tr>
+  <tr>
+    <td>-lambda</td>
+    <td>regularization</td>
+    <td align=center>0.001</td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><code>kernel-fogd</code></td>
+    <td>-gamma<code></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="3"><code>KOL -i a9a_train -opt kernel-fogd -D 400 -eta 0.001 -gamma 0.001</code></td>
+  </tr>
+  <tr>
+    <td>-eta</td>
+    <td>the learning step size</td>
+    <td align=center>0.5</td>
+  </tr>
+  <tr>
+    <td>-D</td>
+    <td>#Fourier components</td>
+    <td align=center>400</td>
+  </tr>
+  <tr>
+    <td rowspan="5"><code>kernel-nogd</code></td>
+    <td>-gamma<code></td>
+    <td><p>gaussian kernel: <i>e<sup>-&#947||x-y||<sup>2</sup></sup></i></p></td>
+    <td align=center><p>0.01</p></td>
+    <td rowspan="5"><code>KOL -i a9a_train -opt kernel-nogd -knogd 30 -eta 0.1 -eta1 0.3 -gamma 0.01 -B 300</code></td>
+  </tr>
+  <tr>
+    <td>-eta</td>
+    <td>the kernel step size</td>
+    <td align=center>0.5</td>
+  </tr>
+  <tr>
+    <td>-eta1</td>
+    <td>the linear step size</td>
+    <td align=center>0.5</td>
+  </tr>
+  <tr>
+    <td>-knogd</td>
+    <td>matrix rank</td>
+    <td align=center>20</td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>budget size</td>
+    <td align=center>100</td>
+  </tr>
+</table>
+<h3>3.5 Other Issues</h3>
+<p align="justify">Note that the C++ toolbox can only conduct simple experiments on a given instances permutation. Thus, we offer some additional Python programs as samples for more complex experiments, such as cross validation for optimal parameters,
+  gererating different permutation of a certain dataset and averaging over many runs.</p>
+<h4>3.5.1 Random Permutation</h4>
+<p align="justify">With the file <code>rand.py</code>, we can generate a random permutation of a given LIBSVM format dataset file with the command line:</p>
+<p><code>rand.py inputfile outputfile</code></p>
+<h4>3.5.2 Cross Validation for Optimal Parameter</h4>
+<p align="justify">The file <code>cross.py</code> is an example that demonstrates the way to use Python program for cross validation.
+  In this example, the program uses 5-cross validation for a grid search of optimal eta and gamma for kernel-ogd algorithm on dataset <code>german</code>.
+  Similarly, it is easy to change the file a little for other datasets, other algorithm or other parameter searching range.</p>
+<h4>3.5.3 Averaging the Results on Different Instances Permutation</h4>
+<p align="justify">The file <code>learn.py</code> provides an example of the way to run experiments 10 times on different permutations of a certain dataset.
+  Only small changes needed for usage to other datasets, other algorithms or parameter settings.</p>
+<hr />
+<h2><strong><a name="C4">About the Matlab Code</a></strong></h2>
+The Matlab code can deal with three online learning problems: binary classification, multi-class classification and regression.
+<h3>4.1 Input Dateset Format</h3>
+<p align="justify">All datasets are in <code>.mat</code> format. Every dataset file consists of two matrix: data matrix and id matrix. The data matrix is of <i>n&#215(d+1)</i> dimension, where <i>n</i> is the number of instances and <i>d</i> is the number of feature dimensions.
+  each instance is represented by a row in the data matrix. The first element in a row is the label of the instance. In binary case, label is in range {1,-1}. In multiclass case, label is in range {1,2,...,<i>m</i>}, where <i>m</i> is the number of class labels.
+  And in regression, the label is a real number. The <i>d</i> elements following the label are the feature values. The id matrix is in <i>20&#215n</i> dimension, where 20 is the number of runs, each run is conducted on different random permutations of the datasets.
+  This id matrix can be generated by running the Matlab function <code>creat_rand_ID.m</code>. We offer some small scale sample datasets in the folder <code>data</code>. </p>
+<h3>4.2 Code usage</h3>
+<p align="justify">All parameter  settings can be adjusted in the file <code>experiment.m</code>. To run the experiments, first change the paramenter settings according to the properities of the dataset. Then run this function with the argument, the name of the training dataset, which should be stored in the folder <code>data</code>. For example, the command might be:</p>
+<p><code>&gt;&gt;experiment('german')</code></p>
+<p>and the output is a table of avereged accuracy and time cost (excluding the data loading time) of 20 runs of all compared algorithms on this dataset. </p>
+<p>&nbsp;</p>
+<h2><strong><a name="C4">FAQ</a></strong></h2>
+<p>Welcome to contact us for any question. E-mail: chhoi@smu.edu.sg </p>
+<p>&nbsp;</p>
+    </div></td>
+    <td width="4">&nbsp;</td>
+  </tr>
+  <tr style="color:#FFFFFF">
+    <td height="22">&nbsp;</td>
+    <td colspan="6"><div align="right">
+        <em>
+         Last Updated:
+         Nov 18, 2014
+    </em>    </div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+
+
+
