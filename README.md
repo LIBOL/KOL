@@ -93,12 +93,19 @@ We may download the a9a datasets and perform the online kernel learning using th
 The ourput is as followings:
 
 Algorithm: kernel_perceptron 
+
 0	10000	20000	30000 
+
 #Training Instances:32561
+
 Learn acuracy: 78.851997%
+
 #SV:6887
+
 Learning time: 10.218000 s
+
 Test acuracy: 70.738899 %
+
 Test time: 9.766000 s
 
 The second line indicates the number of processed training samples until now, which can give an intuitive impression of the processing speed. This is a necessary output in the case when the training time is extremely long. The output includes the training accuracy, training time cost (including loading time), the number of support vectors, test accuracy and test time (including loading time).
