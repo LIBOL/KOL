@@ -105,5 +105,70 @@ The second line indicates the number of processed training samples until now, wh
 
 __________________________________________________________
 
+Parameter Setting:
+
+Each algorithm has its own set of parameters. We will give detailed explainations about the useage of each algorithm.
+
+parameter                                                                   command line    default value
+
+the gaussian width parameter for gaussian kernel exp(-\gamma||x-y||_2^2)    -gamma           gamma=0.01
+
+budget size for all budget algorithms, the max number of support vectors     -B               B=100
+
+the learning rate for gradient descent based algorithms                      -eta             eta= 0.5
+
+the regularizer parameter for bogd                                           -lambda          gamma=0.01
+
+
+For parameters specially for some algorithms, we will introduce with the following examples:
+
+1. Perceptron:
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-perceptron -gamma 0.1
+
+2. OGD:
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-ogd -eta 0.1 -gamma 0.01
+
+3. RBP
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-rbp -B 300
+
+4. Kernel-forgetron
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-forgetron -B 300 -gamma 0.01
+
+5. Kernel-projectron
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-projectron -B 300
+
+6. Kernel-projectronpp
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-projectronpp -B 300 -gamma 0.01
+
+7. Kernel-bpas
+
+>>KOL -i a9a_train -t a9a_test -opt kernel-bpas -B 300 -cbpas 1 -gamma 0.01
+
+Note that the parameter cbpas is the weight paramter C, which controls the step size. default value is 1. 
+
+8: BOGD
+
+>>KOL -i a9a_train -opt kernel-bogd -B 300 -lambda 0.1 -eta 0.1 -gamma 0.01
+
+9: FOGD
+
+>>KOL -i a9a_train -opt kernel-fogd -D 400 -eta 0.001 -gamma 0.001
+
+Note that the parameter D is the number of fourier components for the FOGD algorithm. default value is 400
+
+10: NOGD
+
+>>KOL -i a9a_train -opt kernel-nogd -knogd 30 -eta 0.1 -eta1 0.3 -gamma 0.01 -B 300
+
+Note that the parameter -knogd is the matrix rank for SVD. default value 20. The eta is the kernel step size and eta1 is the linear step size, both with 0.5 default value.  
+____________________________________________________
+
+
 
 
