@@ -78,7 +78,7 @@ Command Line
 
 After compiling the code of the toolbox and getting the executable file "KOL", we can use command line mode to run the algorithms:
 
->> KOL -i training_dataset [-t testing_dataset] -opt algorithm_name [parameter setting]
+>>KOL -i training_dataset [-t testing_dataset] -opt algorithm_name [parameter setting]
 
 KOL is the name of the executable file we got from compiling the code. -i training_dataset is a necessary input indicating the training dataset name. -opt algorithm_name is another necessary input indicating the selected algorithm for learning. -t testing_dataset is an optional input indicating the testing dataset name. If not indicated, the algorithm will only conduct the training process and output the online training accuracy and time cost. Parameter setting is also optional and diverses among different algorithms. If not indicated, the algorithm will use default setting.
 
@@ -88,7 +88,7 @@ A quick example:
 
 We may download the a9a datasets and perform the online kernel learning using the perceptron algorithm. We try the following command line:
 
->> KOL -i a9a_train -t a9a_test -opt kernel-perceptron
+>>KOL -i a9a_train -t a9a_test -opt kernel-perceptron
 
 The ourput is as followings:
 
