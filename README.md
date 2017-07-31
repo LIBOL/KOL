@@ -65,6 +65,7 @@ Prepare for the input data
 We use the LIBSVM dataset formate, which is an effcient sparse data representation as input.  Each instance in the dataset is represented by a row of numbers ended by "\n". For example:
 
 +1 5:1 16:1 20:1 37:1 40:1 63:1 68:1 73:1 74:1 76:1 82:1 93:1
+
 -1 2:1 6:1 18:1 19:1 39:1 40:1 52:1 61:1 71:1 72:1 74:1 76:1 80:1 95:1
 
 In the above dataset, there are 2 instances stored in two rows. Each row begins with the class label of this instance. In binary classification the label appears in two forms: {+1, -1}. Note that some dataset files might be labeled with {0, 1}, which is not allowed by our toolbox. They have to be preprocessed and transformed to the {-1,+1} formate. Following the label, the feature values appears in form feature_index:feature_value. This is a sparse feature representation. If one certain feature index does not appear, it indicates that its value is zero.
