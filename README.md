@@ -1,1 +1,60 @@
-# LIBOKL
+LIBOKL-- A Library for Online Kernel Learning Algorithms
+
+Authors:
+Lu Jing, Wu Yue, Steven Hoi
+
+Contact: chhoi@ntu.edu.sg, jing.lu.2014@phdis.smu.edu.sg
+
+LIBOKL is a package for solving large scale online kernel learning tasks. The current version is in C++ and has a total of 10 different online single kernel learning algorithm for binary classification, which are all widely used in online kernel learning research. We also provide other packages for multi-class classification and regression and multiple kernel learning. See the link at the end.
+
+The algorithms in this package includes:
+
+1. Perceptron: The kernelized Perceptron without budget maintainance. http://cseweb.ucsd.edu/~yfreund/papers/LargeMarginsUsingPerceptron.pdf
+
+2. Online Gradient Descent (OGD): The kernelized online gradient descent algorithm without budget maintainance. 
+http://eprints.pascal-network.org/archive/00002055/01/KivSmoWil04.pdf
+
+3. Random Budget Perceptron (RBP): Budgeted perceptron algorithm with random support vector removal strategy. 
+ http://air.unimi.it/bitstream/2434/26350/1/J29.pdf
+
+4. Forgetron: Forgetron algorithm that maintains the budget size by discarding the oldest support vectors. 
+http://papers.nips.cc/paper/2806-the-forgetron-a-kernel-based-perceptron-on-a-fixed-budget.pdf
+
+5. Projectron: The Projectron algorithm using budget projection strategy. 
+http://eprints.pascal-network.org/archive/00004472/01/355.pdf
+
+6. Projectron++: The aggressive version of Projectron algorithm that updates with both margin error and mistake case. 
+http://eprints.pascal-network.org/archive/00004472/01/355.pdf
+
+7. BPAs: The budget passive-aggressive algrotihtm with simple supprot removal strategy.
+http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_WangV10.pdf
+
+8. BOGD: The budget online gradient descent algorithm by SV removal strategy 
+http://arxiv.org/ftp/arxiv/papers/1206/1206.4633.pdf
+
+9. FOGD: The Fourier Online Gradient Descent algorithm using functional approximation method.
+http://jingonline.weebly.com/uploads/5/3/7/3/53733905/lu15a.pdf
+
+10. NOGD: The Nystrom Online Gradient Descent algorithm using functional approximation method.[pdf]
+http://jingonline.weebly.com/uploads/5/3/7/3/53733905/lu15a.pdf
+
+The last two were proposed by our group and published on Journal of Machine Learning Research. If you need to use this code package, please cite our paper as: 
+
+Lu J, Hoi S C H, Wang J, et al. Large scale online kernel learning[J]. Journal of Machine Learning Research, 2016, 17(47): 1.
+
+or bib:
+________________________________________
+@article{lu2016large,
+  title={Large scale online kernel learning},
+  author={Lu, Jing and Hoi, Steven CH and Wang, Jialei and Zhao, Peilin and Liu, Zhi-Yong},
+  journal={Journal of Machine Learning Research},
+  volume={17},
+  number={47},
+  pages={1},
+  year={2016},
+  publisher={Journal of Machine Learning Research/Microtome Publishing}
+}
+_________________________________________
+
+We will birefly introduce the usage of LIBOKL. To get started, please refer to the file 
+
