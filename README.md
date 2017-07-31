@@ -179,17 +179,24 @@ ____________________________________________________
 Related links:
 
 Steven Hoi's home page: http://stevenhoi.org/
+
 LU Jing's home page: http://jingonline.weebly.com/
 
 LIBOL: http://libol.stevenhoi.org/
+
 LIBSOL: http://libsol.stevenhoi.org/
+
 Eigen: http://eigen.tuxfamily.org/index.php?title=Main_Page
+
 LIBSVM: https://www.csie.ntu.edu.tw/~cjlin/libsvm/
+
 Journal of Machine Learning Reseaerch: http://jmlr.org/papers/v17/14-148.html
+
 
 Our Matlab codes for all experiments in the research paper:
 
 Our follow-up research in online multiple kernel learning: 
+
 
 A follow-up work to our proposed algorithm in NIPS: https://papers.nips.cc/paper/6560-dual-space-gradient-descent-for-online-learning.pdf
 
