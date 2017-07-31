@@ -57,7 +57,7 @@ ________________________________________
 }
 _________________________________________
 
-We will birefly introduce the usage of LIBOKL. To get started, please refer to the file install.pdf, which provide a detailed step-by-step guide on the installation of this package. Before it, an Eigen package is needed (http://eigen.tuxfamily.org/index.php?title=Main_Page). After building, we get an executable file KOL and use it in command line.
+To get started, please refer to the file install.pdf, which provide a detailed step-by-step guide on the installation of this package. Before it, an Eigen package is needed (http://eigen.tuxfamily.org/index.php?title=Main_Page). After building, we get an executable file KOL and use it in command line.
 _______________________________________
 
 Prepare for the input data
