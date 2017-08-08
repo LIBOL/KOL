@@ -195,7 +195,7 @@ Journal of Machine Learning Reseaerch: http://jmlr.org/papers/v17/14-148.html
 
 Our Matlab codes for all experiments in the research paper:https://github.com/jingcoco/Online-Kernel-Learning
 
-Our follow-up research in online multiple kernel learning: 
+Our follow-up research in online multiple kernel learning: https://github.com/jingcoco/Online-Multiple-Kernel-Learning
 
 
 A follow-up work to our proposed algorithm in NIPS: https://papers.nips.cc/paper/6560-dual-space-gradient-descent-for-online-learning.pdf
