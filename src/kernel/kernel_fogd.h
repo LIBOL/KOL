@@ -115,7 +115,7 @@ float kernel_fogd<FeatType,LabelType>::UpdateWeightVec(const DataPoint<FeatType,
 		a = B_cos * ux[i] + C_cos * ux[i] * abs(ux[i]);
         *p1 = P_cos * (a * abs(a) - a) + a;
 
-        *p2=sqrt(1-(*p1)*(*p1));
+        *p2=sqrt(1-fmin(1.0, (*p1)*(*p1)));
 		if(ux[i]<0)
 			*p2=-(*p2);
 
